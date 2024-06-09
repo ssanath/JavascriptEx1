@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Translate</title>
+    </head>
+    <body>
+        <script>
+            function translate(sentence) {
+                var arr = ['a','e','i','o','u'];
+                var str = "";
+                for(var i=0;i<sentence.length;i++) {
+                    if(!arr.includes(sentence[i]) && sentence[i] != " ") {
+                        str += sentence[i] + "o" + sentence[i];
+                    }
+                    else {
+                        str += sentence[i];
+                    }
+                }
+
+                return str;
+            }
+            var sentence = prompt("Enter a sentence: ");
+            var res = translate(sentence);
+            document.write(res);
+        </script>
+    </body>
+</html>

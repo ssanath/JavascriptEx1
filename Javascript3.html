@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Vowel</title>
+    </head>
+    <body>
+        <script>
+            function isVowel(char) {
+                var arr = ['a','e','i','o','u'];
+
+                for(var i=0;i<arr.length;i++) {
+                    if(arr[i] == char) {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+            var char = prompt("Enter a character: ");
+            var res = isVowel(char);
+            if(res) {
+                document.write("Vowel");
+            }
+            else
+            {
+                document.write("Not a vowel");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Reverse</title>
+    </head>
+    <body>
+        <script>
+            function reverse(str) {
+                var len = str.length;
+                var arr = str.split("");
+
+                for(var i=0;i<parseInt(len/2);i++) {
+                    var temp = arr[i];
+                    arr[i] = arr[len-i-1];
+                    arr[len-i-1] = temp;
+                }
+
+                return arr.join("");
+            }
+            var sentence = prompt("Enter a sentence: ");
+            var res = reverse(sentence);
+            document.write(res);
+        </script>
+    </body>
+</html>
