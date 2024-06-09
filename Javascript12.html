@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Javascript12</title>
+    </head>
+
+    <body>
+        <script>
+            var names = []
+            while(true) {
+                var name = prompt("Enter a name");
+                if(name === "" || name === null) {
+                    break;
+                }
+                names.push(name);
+            }
+            names.sort();
+            document.write("Sorted names:");
+            document.write("<ol>");
+            for(var i=0;i<names.length;i++)
+            {
+                document.write("<li>" + names[i] + "</li>");
+            }
+            document.write("</ol>");
+        </script>
+    </body>
+</html>

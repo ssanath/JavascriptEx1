@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <script type="text/JAVASCRIPT">
+        function longestWord(str) {
+            const words = str.split(" ");
+            var word = "";
+            for(var i=0;i<words.length;i++)
+            {
+                if(words[i].length > word.length)
+                {
+                    word = words[i];
+                }
+            }
+            return [word, word.length];
+        }
+    </script>
+    <script type="text/JAVASCRIPT">
+        var str = prompt("Enter the array of words: ");
+        var word = longestWord(str);
+        document.write("<p>Longest word: " + word[0] + " Length: " + word[1] + "</p>");
+    </script>
+</body>
+</html>

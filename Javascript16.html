@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Details</h2>
+    <form id="details" action="#" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+        </div>
+        <div>
+            <label for="hometown">Home Town:</label>
+            <input type="text" id="hometown" name="hometown" required>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <script type="text/javascript">
+        function func(name,age,hometown) {
+            var yearOfBirth = 2024 - age;
+            document.write("Name: " + name);
+            document.write("Year of birth: " + yearOfBirth);
+            document.write("Link to your home town: ")
+            document.write("<a href=https://www.google.com/search?q="+hometown+">Visit this link</a>")
+        }
+    </script>
+
+    <script>
+        document.getElementById('details').addEventListener('submit', function(event) {
+            var name = document.getElementById('name').value;
+            var age = parseInt(document.getElementById('age').value);
+            var hometown = document.getElementById('hometown').value;
+            func(name,age,hometown);
+        });
+    </script>
+</body>
+</html>

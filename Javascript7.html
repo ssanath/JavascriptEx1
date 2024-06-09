@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <script type="text/JAVASCRIPT">
+        function bilingualLexicon(str) {
+            var newStr = "";
+            const words = str.split(" ");
+            const map = new Map();
+            map.set("merry","god");
+            map.set("christmas","jul");
+            map.set("and","och");
+            map.set("happy","gott");
+            map.set("new","nytt");
+            map.set("year","år");
+            for(var i=0;i<words.length;i++)
+            {
+                newStr = newStr + map.get(words[i]) + " ";
+            }
+            return newStr;
+        }
+    </script>
+    <script type="text/JAVASCRIPT">
+        var str = prompt("Enter the string: ");
+        var translatedStr = bilingualLexicon(str);
+        document.write("<p>Translated to Swedish: " + translatedStr + "</p>");
+    </script>
+</body>
+</html>

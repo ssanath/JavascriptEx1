@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <script type="text/JAVASCRIPT">
+        function charFreq(str) {
+            const map = new Map();
+            for(var i=0;i<str.length;i++)
+            {
+                map.set(str[i],0);
+            }
+            for(var i=0;i<str.length;i++)
+            {
+                var freq = map.get(str[i]);
+                freq += 1;
+                map.set(str[i],freq);
+            }
+            return map;
+        }
+    </script>
+    <script type="text/JAVASCRIPT">
+        var str = prompt("Enter the string: ");
+        var map = charFreq(str);
+        var mapString = "Map: {";
+        map.forEach(function(value, key) {
+            mapString += "'" + key + "': " + value + ", ";
+        });
+        mapString = mapString.slice(0, -2) + "}";
+        
+        document.write("<p>" + mapString + "</p>");
+    </script>
+</body>
+</html>

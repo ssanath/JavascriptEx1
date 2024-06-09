@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <script type="text/JAVASCRIPT">
+        var num = prompt("Enter the number of random integers to generate: ");
+        var sum=0;
+        for(var i=0;i<num;i++)
+        {
+            sum += Math.floor(Math.random()*10 + 1);
+        }
+        var avg = sum/num;
+        document.write("<p>Average of the integers: " + avg + "</p>");
+    </script>
+</body>
+</html>

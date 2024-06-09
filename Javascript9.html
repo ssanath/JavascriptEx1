@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <script type="text/JAVASCRIPT">
+        function filterLongWords(str,num) {
+            const words = str.split(" ");
+            var filteredWords = [];
+            for(var i=0;i<words.length;i++)
+            {
+                if(words[i].length > num)
+                {
+                    filteredWords.push(words[i]);
+                }
+            }
+            return filteredWords;
+        }
+    </script>
+    <script type="text/JAVASCRIPT">
+        var str = prompt("Enter the array of words: ");
+        var num = prompt("Enter the number: ");
+        var filteredWords = filterLongWords(str,num);
+        document.write("<p>Filtered words: " + filteredWords + "</p>");
+    </script>
+</body>
+</html>
